@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace overridemethos
 {
-    class A
-    {
-        public A()
-        {
-            Console.WriteLine("A의 생성자");
-        }
-        ~A()
-        {
-            Console.WriteLine("A의 소멸자");
-        }
-    }
-    class B : A
-    {
-        public B()
-        {
-            Console.WriteLine("B의 생성자");
-        }
-        ~B()
-        {
-            Console.WriteLine("B의 소멸자");
-        }
-    }
+    //class A
+    //{
+    //    public A()
+    //    {
+    //        Console.WriteLine("A의 생성자");
+    //    }
+    //    ~A()
+    //    {
+    //        Console.WriteLine("A의 소멸자");
+    //    }
+    //}
+    //class B : A
+    //{
+    //    public B()
+    //    {
+    //        Console.WriteLine("B의 생성자");
+    //    }
+    //    ~B()
+    //    {
+    //        Console.WriteLine("B의 소멸자");
+    //    }
+    //}
     class Program
     {
         //int Power(int input)
@@ -72,9 +72,27 @@ namespace overridemethos
         //{
         //    return input > 0 ? input : -input;
         //}
+        static int Test(int A)
+        {
+            return 10;
+        }
+        static int Test(long A)
+        {
+            return 20;
+        }
+        static int Test(float A)
+        {
+            return 30;
+        }
+        static int Test(double A)
+        {
+            return 40;
+        }
         static void Main(string[] args)
         {
-            new B();
+            //new B();
+            Console.WriteLine(Test(52273));
+            Console.WriteLine(Test(52.273));
         }
     }
 }
