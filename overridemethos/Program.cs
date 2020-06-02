@@ -6,6 +6,28 @@ using System.Threading.Tasks;
 
 namespace overridemethos
 {
+    class A
+    {
+        public A()
+        {
+            Console.WriteLine("A의 생성자");
+        }
+        ~A()
+        {
+            Console.WriteLine("A의 소멸자");
+        }
+    }
+    class B : A
+    {
+        public B()
+        {
+            Console.WriteLine("B의 생성자");
+        }
+        ~B()
+        {
+            Console.WriteLine("B의 소멸자");
+        }
+    }
     class Program
     {
         //int Power(int input)
@@ -34,24 +56,25 @@ namespace overridemethos
         //    return sum;
         //}
 
-        static int Abs(int input)
-        {
-            return input > 0 ? input : -input;
-        }
-        static double Abs(int input)
-        {
-            return input > 0 ? input : -input;
-        }
-        static long Abs(long input)
-        {
-            return input > 0 ? input : -input;
-        }
-        static double Abs(long input)
-        {
-            return input > 0 ? input : -input;
-        }
+        //static int Abs(int input)
+        //{
+        //    return input > 0 ? input : -input;
+        //}
+        //static double Abs(int input)
+        //{
+        //    return input > 0 ? input : -input;
+        //}
+        //static long Abs(long input)
+        //{
+        //    return input > 0 ? input : -input;
+        //}
+        //static double Abs(long input)
+        //{
+        //    return input > 0 ? input : -input;
+        //}
         static void Main(string[] args)
         {
+            new B();
         }
     }
 }
